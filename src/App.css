@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Style+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+  transition: 0.3s ease-in-out;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --style: "Style Script", cursive;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+}
+
+.navbar.fixed {
+  background-color: #ffff !important;
+}
+
+.navbar.fixed li a {
+  color: #000 !important;
+}
+
+.navbar.fixed svg {
+  fill: #000;
+}
+.navbar.fixed .serach-box-container {
+  top: 0%;
+  left: 15%;
+  width: 800px;
+  height: 80px;
+}
+
+.navbar.fixed .serach-box-container .input-box {
+  background-color: #cccccc2c;
+  top: 15%;
+}
+.navbar.fixed .serach-box-container .input-box input {
+  background-color: transparent;
+  padding-left: 10px;
+  width: 550px;
+}
+.navbar.fixed .serach-box-container .input-box .choice-btn {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+nav .navbar-brand {
+  fill: #ffff;
+}
+
+.navbar-nav li {
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.navbar-nav li .dropdown-menu li a:hover {
+  background-color: lightgreen;
+}
+
+.navbar-nav .dropdown-menu li {
+  padding: 8px;
+}
+
+.navbar-nav .dropdown-menu {
+  margin-left: -100px;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+
+.header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.serach-box-container {
+  width: 40%;
+  height: 300px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.search-box {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-box .heading {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  width: 100%;
+}
+.search-box h3 {
+  width: 100%;
+  margin-top: -20px;
+  font-size: 30px;
+}
+.input-box {
+  width: 100%;
+  background-color: #ffff;
+  padding: 8px 0px;
+  border-radius: 10px;
+  position: relative;
+}
+.input-box li {
+  padding: 3px 8px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 40px;
+  border: none;
+}
+
+.input-box #search1:focus,
+.input-box #search2:focus {
+  outline: none !important;
+}
+
+.dropdown-menu li a i {
+  padding: 0px 5px;
+  color: #abaaaa;
+}
+
+.dropdown-menu li a:hover i {
+  color: #000;
+}
+
+.lang {
+  width: 25px;
+}
+.choice-btn {
+  width: 160px !important;
+  position: relative;
+}
+.choce-btn:hover {
+  background: #ccc;
+}
+
+.btn-search {
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+
+.btn-search button {
+  width: 60px;
+  height: 40px;
+  border: none;
+  background: transparent;
+}
+.btn-search button i {
+  font-size: 22px;
+  color: #a8a4a4;
+}
+.choice-btn li i {
+  color: #a8a4a4;
+}
+.btn-search button:focus {
+  outline: none !important;
+  color: #000;
+}
+
+.toggle-btn:hover {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.btn-search button i:hover,
+.choice-btn li i:hover {
+  color: #000 !important;
+}
+
+.choice-btn .dropdown-menu {
+  margin-left: -10px;
+  width: 50px !important;
+  position: absolute;
+  top: 45px;
+  left: 5px;
+  z-index: 1000;
+}
+
+.main-navbar {
+  width: 100%;
+  margin-top: 420px;
+}
+
+.main-navbar ul li {
+  padding: 0 15px;
+  list-style: none;
+}
+.main-navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  padding: 15px;
+}
+.main-navbar ul li a.active {
+  background-color: #000;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+}
+
+.gallery-container {
+  column-count: 4;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+}
+
+.photographer-name {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  border-radius: 15px;
+  width: auto;
+}
+
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+}
+.card:hover .card-overlay {
+  background-color: #00000037 !important;
+  cursor: pointer;
+}
+
+.random-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.card-top-icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.card-top-icon button:hover {
+  background-color: #01010195;
+  border-radius: 10px;
+}
+
+.card:hover .card-top-icon,
+.card:hover .image-info {
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.card-top-icon,
+.image-info {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.play-button {
+  margin-right: 300px;
+}
+
+.card-text a:hover {
+  color: #ccc !important;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.spinners ~ .spinner-grow {
+  animation: spinner-grow 1.5s ease-in-out linear infinite;
+  display: inline-block;
+}
+
+.spinners .spinner-grow:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.spinners .spinner-grow:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.spinners .spinner-grow:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.spinners .spinner-grow:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.spinners .spinner-grow:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.modal-backdrop {
+  background-color: rgb(0, 0, 0) !important; /* Example: Red with 70% opacity */
+}
+
+.modal-content {
+  width: 600px;
+}
+
+.signup-modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal .btn-google {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px !important;
+}
+.modal .btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal .btn-google:hover {
+  background-color: #cccccc7f;
+  border: 1px solid #000 !important;
+}
+
+.modal .btn-apple,
+.modal .btn-fb {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px !important;
+}
+
+.modal .btn-apple:hover {
+  background-color: #000;
+}
+.modal .btn-fb:hover {
+  background-color: #3a5ed5;
+}
+.modal .btn-apple:hover i {
+  color: #fff;
+}
+
+.modal .btn-fb:hover i {
+  color: #fff !important;
+}
+
+.modal form .form-group {
+  margin-bottom: 25px;
+}
+
+.modal form input {
+  height: 45px !important;
+}
+
+.modal .btn-signUp {
+  background-color: #5ae2a2;
+  height: 45px;
+  border-radius: 10px;
+}
+.modal .btn-signUp:hover {
+  background-color: #0ab967;
+}
+.modal .footer p {
+  font-size: 14px;
+}
+
+.modal .footer p a {
+  text-underline-position: under;
+}
+.modal .footer p a:hover {
+  color: #000 !important;
+}
+
+.img-details-modal .modal-content {
+  width: 1250px;
+}
+
+.img-details-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-details-modal a {
+  text-decoration: none;
+  color: #000;
+}
+
+.img-details-modal .modal-btn-group button {
+  border: 1px solid #cccccc50 !important;
+  padding: 8px;
+  width: 120px;
+}
+
+.img-details-modal .modal-btn-group button:hover {
+  border: 1px solid #a5a4a4 !important;
+  background-color: #cccccc53;
+}
+
+.canva {
+  width: 20px;
+  height: 20px;
+}
+.btn-download {
+  background-color: rgb(11, 202, 11);
+  width: 200px !important;
+}
+.btn-download:hover {
+  background-color: rgb(11, 141, 11) !important;
+}
+
+.btn-close {
+  width: 30px !important;
+}
+
+.btn-canva {
+  width: 170px !important;
+}
+
+.img-details-modal .modal-img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-details-modal .modal-body img {
+  width: auto;
+  height: 580px;
+  object-fit: cover;
+}
+
+.img-details-modal .modal-body video {
+  width: auto;
+  height: 580px;
+  object-fit: cover;
+}
+.img-details-modal .dropdown-menu {
+  width: 260px;
+  padding: 15px;
+}
+
+.img-details-modal .dropdown-menu li {
+  margin-top: 15px;
+}
+
+.img-details-modal .dropdown-menu button {
+  width: 100% !important;
+  margin-top: 20px;
+}
+
+.country-list button {
+  width: auto;
+  height: 45px;
+  text-align: center;
+  border-radius: 50px;
+  border-color: #cccccc90;
+  padding: 5px 5px;
+}
+
+.country-list button:hover {
+  background-color: #cccc;
+}
